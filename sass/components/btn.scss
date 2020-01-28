@@ -1,0 +1,40 @@
+.btn{
+  max-width: 19rem;
+  padding: 1.5rem 3rem;
+  box-shadow: 5px 5px 5px rgba(black,0.75);
+  text-align: center;
+  vertical-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  &--darkYellow{
+    color: black;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+
+    background-image: linear-gradient(180deg, $color-secondary-light 0%, $color-secondary-dark 50%);
+  }
+
+
+  &--green{
+    background-image: linear-gradient(0deg,#8ebb00 , #b7da47);
+    border-radius: 10px;
+    color: white;
+    border: 1px solid #8f8d8d;
+    box-shadow: 3px 3px 5px rgba(black,0.75);
+    padding: 2rem 2.5rem;
+    font-size: 1.9rem;
+  }
+
+  &--leftDig{
+    color: black;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.6rem;
+    box-shadow: none;
+    background-color: #fed428;
+    clip-path: polygon(10% 0%,100% 0,100% 100%,0% 100%);
+  }
+}
+
