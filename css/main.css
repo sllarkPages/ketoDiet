@@ -326,7 +326,7 @@ h1, h2 {
     .ec .ec__nav:before {
       content: "";
       display: block;
-      background-image: url("../../img/arrow.png");
+      background-image: url("../img/arrow.png");
       background-repeat: no-repeat;
       background-position: center center;
       width: 100%;
@@ -601,7 +601,7 @@ main > .container {
       width: 100%; } }
   .contentLeft .heroSection {
     height: 48rem;
-    background-image: url("../../img/yogaLady.jpg");
+    background-image: url("../img/yogaLady.jpg");
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
