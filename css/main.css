@@ -152,11 +152,12 @@ h1, h2 {
 
 .productBox {
   width: 100%;
-  height: 37rem;
+  min-height: 37rem;
   margin: 2rem 0 0;
-  padding: 3.5rem 4rem;
+  padding: 3.5rem 3rem;
   background-color: #eff8fb;
   display: flex;
+  justify-content: space-between;
   border: 2px dashed rgba(143, 141, 141, 0.7); }
   @media (max-width: 500px) {
     .productBox {
@@ -165,8 +166,9 @@ h1, h2 {
       align-items: center;
       height: auto;
       padding: 1rem 1rem 3.5rem 1rem; } }
+  .productBox > picture {
+    width: 48%; }
   .productBox > picture > img {
-    margin-right: 5rem;
     mix-blend-mode: darken; }
     @media (max-width: 600px) {
       .productBox > picture > img {
@@ -175,33 +177,35 @@ h1, h2 {
       .productBox > picture > img {
         height: 31rem;
         margin: 1rem 0 2rem; } }
-  @media (max-width: 500px) {
-    .productBox__content {
-      display: flex;
-      flex-flow: column;
-      justify-content: flex-start;
-      align-items: center; } }
-  .productBox__content .textList {
-    margin-top: 0; }
-  .productBox__content h2 {
-    text-align: left;
-    font-family: 'Anton', sans-serif;
-    font-size: 2.4rem;
-    color: black; }
+  .productBox__content {
+    width: 48%; }
     @media (max-width: 500px) {
-      .productBox__content h2 {
-        font-size: 3.6rem;
-        text-align: center; } }
-  .productBox__content li {
-    margin: 2rem 0 !important; }
-    .productBox__content li div h4 {
-      margin-left: 2rem;
-      line-height: 1.5; }
-  .productBox__content .btn {
-    margin-top: 2rem; }
-    @media (max-width: 500px) {
-      .productBox__content .btn {
-        margin-top: 0; } }
+      .productBox__content {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: center; } }
+    .productBox__content .textList {
+      margin-top: 0; }
+    .productBox__content h2 {
+      text-align: left;
+      font-family: 'Anton', sans-serif;
+      font-size: 2.4rem;
+      color: black; }
+      @media (max-width: 500px) {
+        .productBox__content h2 {
+          font-size: 3.6rem;
+          text-align: center; } }
+    .productBox__content li {
+      margin: 2rem 0 !important; }
+      .productBox__content li div h4 {
+        margin-left: 2rem;
+        line-height: 1.5; }
+    .productBox__content .btn {
+      margin-top: 2rem; }
+      @media (max-width: 500px) {
+        .productBox__content .btn {
+          margin-top: 0; } }
   .productBox p {
     margin-top: 1.5rem;
     font-size: 1.55rem;
@@ -262,6 +266,25 @@ h1, h2 {
         color: #000;
         margin-left: 1rem; }
 
+.textList2 {
+  padding-left: 0.5rem; }
+  .textList2 li {
+    margin: 1.5rem 0; }
+    .textList2 li p {
+      padding-left: 2.5rem;
+      margin: 0 !important;
+      position: relative; }
+      .textList2 li p:after {
+        content: '';
+        display: block;
+        width: 7px;
+        height: 7px;
+        border-radius: 100%;
+        background-color: black;
+        position: absolute;
+        left: 0;
+        top: 10px; }
+
 .ec {
   position: relative; }
   .ec .ec__holder {
@@ -303,7 +326,7 @@ h1, h2 {
     .ec .ec__nav:before {
       content: "";
       display: block;
-      background-image: url("../img/arrow.png");
+      background-image: url("../../img/arrow.png");
       background-repeat: no-repeat;
       background-position: center center;
       width: 100%;
@@ -440,7 +463,6 @@ h1, h2 {
             justify-content: center;
             align-items: center;
             position: relative;
-            text-transform: uppercase;
             padding: 0.5rem 1.5rem;
             cursor: pointer; }
             @media (max-width: 950px) {
@@ -579,7 +601,7 @@ main > .container {
       width: 100%; } }
   .contentLeft .heroSection {
     height: 48rem;
-    background-image: url("../img/yogaLady.jpg");
+    background-image: url("../../img/yogaLady.jpg");
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
@@ -634,13 +656,29 @@ main > .container {
       font-size: 2.2rem;
       font-weight: bold;
       color: #9bcc00;
-      text-transform: uppercase;
       text-align: left; }
+    .contentLeft .sectionText h2 {
+      font-size: 1.9rem;
+      font-weight: bold;
+      color: #9bcc00;
+      text-transform: uppercase;
+      text-align: left;
+      margin-top: 1.6rem; }
+    .contentLeft .sectionText h3 {
+      margin-top: 1.6rem;
+      font-size: 2rem;
+      font-weight: normal; }
     .contentLeft .sectionText p {
       margin-top: 1.5rem;
       font-size: 1.55rem;
       color: black;
-      line-height: 1.4; }
+      line-height: 1.5;
+      opacity: 0.85; }
+      .contentLeft .sectionText p br {
+        width: 100%;
+        margin: 9px 0;
+        display: block;
+        content: ''; }
   .contentLeft .sectionSlider {
     background-color: white;
     flex-flow: column;
@@ -694,6 +732,7 @@ main > .container {
       flex-flow: row;
       padding: 0 2rem;
       align-items: flex-start;
+      justify-content: space-around;
       border: 1px solid #cccccc;
       margin: 0.6rem 0; }
       @media (max-width: 960px) {
@@ -701,7 +740,8 @@ main > .container {
           padding: 10px 2rem;
           max-width: 33rem; } }
       .sideBarRight .sectionSideBarTop .product > picture img {
-        margin: 0.5rem 0; }
+        margin: 0.5rem 0;
+        max-width: 13rem; }
       .sideBarRight .sectionSideBarTop .product__content {
         transform: translateY(3rem);
         text-align: left; }
@@ -710,8 +750,7 @@ main > .container {
         .sideBarRight .sectionSideBarTop .product__content img {
           cursor: pointer; }
   .sideBarRight .sectionSiderBarSec {
-    flex-flow: column;
-    margin-bottom: 2rem; }
+    flex-flow: column; }
     .sideBarRight .sectionSiderBarSec ul {
       width: 100%; }
       .sideBarRight .sectionSiderBarSec ul li {
